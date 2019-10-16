@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>About</h1>
+  <div>
+      {% for about in object_list %}
+      <h2> {{about.short_description}}  </h2>
+      <p>{{about.description}}</p>
+      <img src=  "{{ about.image.url }}" alt="">
+      {% endfor %}
+  </div>
+{% endblock %}
